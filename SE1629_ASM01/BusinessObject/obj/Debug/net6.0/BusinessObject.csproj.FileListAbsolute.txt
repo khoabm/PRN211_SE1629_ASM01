@@ -1,0 +1,12 @@
+D:\FPT\SU2022\PRN211\New folder\BusinessObject\bin\Debug\net6.0\BusinessObject.deps.json
+D:\FPT\SU2022\PRN211\New folder\BusinessObject\bin\Debug\net6.0\BusinessObject.dll
+D:\FPT\SU2022\PRN211\New folder\BusinessObject\bin\Debug\net6.0\BusinessObject.pdb
+D:\FPT\SU2022\PRN211\New folder\BusinessObject\obj\Debug\net6.0\BusinessObject.csproj.AssemblyReference.cache
+D:\FPT\SU2022\PRN211\New folder\BusinessObject\obj\Debug\net6.0\BusinessObject.GeneratedMSBuildEditorConfig.editorconfig
+D:\FPT\SU2022\PRN211\New folder\BusinessObject\obj\Debug\net6.0\BusinessObject.AssemblyInfoInputs.cache
+D:\FPT\SU2022\PRN211\New folder\BusinessObject\obj\Debug\net6.0\BusinessObject.AssemblyInfo.cs
+D:\FPT\SU2022\PRN211\New folder\BusinessObject\obj\Debug\net6.0\BusinessObject.csproj.CoreCompileInputs.cache
+D:\FPT\SU2022\PRN211\New folder\BusinessObject\obj\Debug\net6.0\BusinessObject.dll
+D:\FPT\SU2022\PRN211\New folder\BusinessObject\obj\Debug\net6.0\refint\BusinessObject.dll
+D:\FPT\SU2022\PRN211\New folder\BusinessObject\obj\Debug\net6.0\BusinessObject.pdb
+D:\FPT\SU2022\PRN211\New folder\BusinessObject\obj\Debug\net6.0\ref\BusinessObject.dll

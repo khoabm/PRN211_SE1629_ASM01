@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\HOCTAP\\PRN211\\Workspace\\asm1\\PRN211_SE1629_ASM01\\SE1629_ASM01\\DataAccess\\DataAccess.csproj": {}
+    "D:\\HOCTAP\\PRN211\\Workspace\\asm1-clone\\PRN211_SE1629_ASM01\\SE1629_ASM01\\DataAccess\\DataAccess.csproj": {}
   },
   "projects": {
-    "D:\\HOCTAP\\PRN211\\Workspace\\asm1\\PRN211_SE1629_ASM01\\SE1629_ASM01\\BusinessObject\\BusinessObject.csproj": {
+    "D:\\HOCTAP\\PRN211\\Workspace\\asm1-clone\\PRN211_SE1629_ASM01\\SE1629_ASM01\\BusinessObject\\BusinessObject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\HOCTAP\\PRN211\\Workspace\\asm1\\PRN211_SE1629_ASM01\\SE1629_ASM01\\BusinessObject\\BusinessObject.csproj",
+        "projectUniqueName": "D:\\HOCTAP\\PRN211\\Workspace\\asm1-clone\\PRN211_SE1629_ASM01\\SE1629_ASM01\\BusinessObject\\BusinessObject.csproj",
         "projectName": "BusinessObject",
-        "projectPath": "D:\\HOCTAP\\PRN211\\Workspace\\asm1\\PRN211_SE1629_ASM01\\SE1629_ASM01\\BusinessObject\\BusinessObject.csproj",
+        "projectPath": "D:\\HOCTAP\\PRN211\\Workspace\\asm1-clone\\PRN211_SE1629_ASM01\\SE1629_ASM01\\BusinessObject\\BusinessObject.csproj",
         "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
-        "outputPath": "D:\\HOCTAP\\PRN211\\Workspace\\asm1\\PRN211_SE1629_ASM01\\SE1629_ASM01\\BusinessObject\\obj\\",
+        "outputPath": "D:\\HOCTAP\\PRN211\\Workspace\\asm1-clone\\PRN211_SE1629_ASM01\\SE1629_ASM01\\BusinessObject\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\VS_IDE\\Shared\\NuGetPackages"
@@ -62,14 +62,14 @@
         }
       }
     },
-    "D:\\HOCTAP\\PRN211\\Workspace\\asm1\\PRN211_SE1629_ASM01\\SE1629_ASM01\\DataAccess\\DataAccess.csproj": {
+    "D:\\HOCTAP\\PRN211\\Workspace\\asm1-clone\\PRN211_SE1629_ASM01\\SE1629_ASM01\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\HOCTAP\\PRN211\\Workspace\\asm1\\PRN211_SE1629_ASM01\\SE1629_ASM01\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "D:\\HOCTAP\\PRN211\\Workspace\\asm1-clone\\PRN211_SE1629_ASM01\\SE1629_ASM01\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "D:\\HOCTAP\\PRN211\\Workspace\\asm1\\PRN211_SE1629_ASM01\\SE1629_ASM01\\DataAccess\\DataAccess.csproj",
+        "projectPath": "D:\\HOCTAP\\PRN211\\Workspace\\asm1-clone\\PRN211_SE1629_ASM01\\SE1629_ASM01\\DataAccess\\DataAccess.csproj",
         "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
-        "outputPath": "D:\\HOCTAP\\PRN211\\Workspace\\asm1\\PRN211_SE1629_ASM01\\SE1629_ASM01\\DataAccess\\obj\\",
+        "outputPath": "D:\\HOCTAP\\PRN211\\Workspace\\asm1-clone\\PRN211_SE1629_ASM01\\SE1629_ASM01\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\VS_IDE\\Shared\\NuGetPackages"
@@ -90,8 +90,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\HOCTAP\\PRN211\\Workspace\\asm1\\PRN211_SE1629_ASM01\\SE1629_ASM01\\BusinessObject\\BusinessObject.csproj": {
-                "projectPath": "D:\\HOCTAP\\PRN211\\Workspace\\asm1\\PRN211_SE1629_ASM01\\SE1629_ASM01\\BusinessObject\\BusinessObject.csproj"
+              "D:\\HOCTAP\\PRN211\\Workspace\\asm1-clone\\PRN211_SE1629_ASM01\\SE1629_ASM01\\BusinessObject\\BusinessObject.csproj": {
+                "projectPath": "D:\\HOCTAP\\PRN211\\Workspace\\asm1-clone\\PRN211_SE1629_ASM01\\SE1629_ASM01\\BusinessObject\\BusinessObject.csproj"
               }
             }
           }

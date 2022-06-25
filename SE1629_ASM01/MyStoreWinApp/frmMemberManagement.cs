@@ -91,8 +91,12 @@ namespace MyStoreWinApp
         {
             try
             {
-                var member = new Member { Id = int.Parse(txtID.Text) };
-                memberRepository.Delete(member.Id);
+                if (MessageBox.Show("Are you sure you want to delete this record?", "Message"
+                    , MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    var member = new Member { Id = int.Parse(txtID.Text) };
+                    memberRepository.Delete(member.Id);
+                }
                 LoadMemberList();
             }
             catch (Exception ex)

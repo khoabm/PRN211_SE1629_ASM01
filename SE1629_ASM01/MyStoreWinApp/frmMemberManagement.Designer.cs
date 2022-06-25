@@ -196,18 +196,18 @@
             // 
             this.txtSearch.Location = new System.Drawing.Point(325, 12);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(254, 27);
+            this.txtSearch.Size = new System.Drawing.Size(297, 27);
             this.txtSearch.TabIndex = 16;
             this.txtSearch.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtSearch_KeyUp);
             // 
             // lbSearch
             // 
             this.lbSearch.AutoSize = true;
-            this.lbSearch.Location = new System.Drawing.Point(224, 15);
+            this.lbSearch.Location = new System.Drawing.Point(205, 15);
             this.lbSearch.Name = "lbSearch";
-            this.lbSearch.Size = new System.Drawing.Size(53, 20);
+            this.lbSearch.Size = new System.Drawing.Size(117, 20);
             this.lbSearch.TabIndex = 17;
-            this.lbSearch.Text = "Search";
+            this.lbSearch.Text = "Search By Name";
             // 
             // btnSort
             // 

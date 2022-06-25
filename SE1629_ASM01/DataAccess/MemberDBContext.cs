@@ -105,7 +105,7 @@ namespace DataAccess
                         Id = dataReader.GetInt32(0),
                         Email = dataReader.GetString(1),
                         Password = dataReader.GetString(2),
-                        Name = dataReader.GetString(3),
+                        Name = dataReader.GetString(3),    
                         City = dataReader.GetString(4),
                         Country = dataReader.GetString(5)
                     });

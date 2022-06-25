@@ -1,4 +1,5 @@
-﻿using DataAccess.Repository;
+﻿using BusinessObject;
+using DataAccess.Repository;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -75,6 +76,29 @@ namespace MyStoreWinApp
         private void btnSort_Click(object sender, EventArgs e)
         {
             source.DataSource = memberRepository.GetMembers().OrderByDescending(mem => mem.Name).ToList();
+        }
+        
+        private void txtSearch_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                source.DataSource = memberRepository.GetByName(txtSearch.Text);
+            }
+            e.Handled = true;
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var member = new Member { Id = int.Parse(txtID.Text) };
+                memberRepository.Delete(member.Id);
+                LoadMemberList();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Delete a member");
+            }
         }
     }
 }

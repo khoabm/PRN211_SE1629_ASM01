@@ -32,7 +32,7 @@ namespace DataAccess
 
         public IDataReader GetDataReader(string commandText, CommandType commandType, out SqlConnection sqlConnection, params SqlParameter[] parameters)
         {
-            IDataReader reader = null;
+            IDataReader? reader = null;
             try
             {
                 sqlConnection = new SqlConnection(ConnectionString);

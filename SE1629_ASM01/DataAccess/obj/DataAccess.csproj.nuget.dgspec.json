@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\FPT\\SU2022\\PRN211\\New folder\\DataAccess\\DataAccess.csproj": {}
+    "D:\\HOCTAP\\PRN211\\Workspace\\asm1\\PRN211_SE1629_ASM01\\SE1629_ASM01\\DataAccess\\DataAccess.csproj": {}
   },
   "projects": {
-    "D:\\FPT\\SU2022\\PRN211\\New folder\\BusinessObject\\BusinessObject.csproj": {
+    "D:\\HOCTAP\\PRN211\\Workspace\\asm1\\PRN211_SE1629_ASM01\\SE1629_ASM01\\BusinessObject\\BusinessObject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\FPT\\SU2022\\PRN211\\New folder\\BusinessObject\\BusinessObject.csproj",
+        "projectUniqueName": "D:\\HOCTAP\\PRN211\\Workspace\\asm1\\PRN211_SE1629_ASM01\\SE1629_ASM01\\BusinessObject\\BusinessObject.csproj",
         "projectName": "BusinessObject",
-        "projectPath": "D:\\FPT\\SU2022\\PRN211\\New folder\\BusinessObject\\BusinessObject.csproj",
-        "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "D:\\FPT\\SU2022\\PRN211\\New folder\\BusinessObject\\obj\\",
+        "projectPath": "D:\\HOCTAP\\PRN211\\Workspace\\asm1\\PRN211_SE1629_ASM01\\SE1629_ASM01\\BusinessObject\\BusinessObject.csproj",
+        "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
+        "outputPath": "D:\\HOCTAP\\PRN211\\Workspace\\asm1\\PRN211_SE1629_ASM01\\SE1629_ASM01\\BusinessObject\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "D:\\VS_IDE\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -58,24 +58,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\FPT\\SU2022\\PRN211\\New folder\\DataAccess\\DataAccess.csproj": {
+    "D:\\HOCTAP\\PRN211\\Workspace\\asm1\\PRN211_SE1629_ASM01\\SE1629_ASM01\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\FPT\\SU2022\\PRN211\\New folder\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "D:\\HOCTAP\\PRN211\\Workspace\\asm1\\PRN211_SE1629_ASM01\\SE1629_ASM01\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "D:\\FPT\\SU2022\\PRN211\\New folder\\DataAccess\\DataAccess.csproj",
-        "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "D:\\FPT\\SU2022\\PRN211\\New folder\\DataAccess\\obj\\",
+        "projectPath": "D:\\HOCTAP\\PRN211\\Workspace\\asm1\\PRN211_SE1629_ASM01\\SE1629_ASM01\\DataAccess\\DataAccess.csproj",
+        "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
+        "outputPath": "D:\\HOCTAP\\PRN211\\Workspace\\asm1\\PRN211_SE1629_ASM01\\SE1629_ASM01\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "D:\\VS_IDE\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -90,8 +90,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\FPT\\SU2022\\PRN211\\New folder\\BusinessObject\\BusinessObject.csproj": {
-                "projectPath": "D:\\FPT\\SU2022\\PRN211\\New folder\\BusinessObject\\BusinessObject.csproj"
+              "D:\\HOCTAP\\PRN211\\Workspace\\asm1\\PRN211_SE1629_ASM01\\SE1629_ASM01\\BusinessObject\\BusinessObject.csproj": {
+                "projectPath": "D:\\HOCTAP\\PRN211\\Workspace\\asm1\\PRN211_SE1629_ASM01\\SE1629_ASM01\\BusinessObject\\BusinessObject.csproj"
               }
             }
           }
@@ -134,7 +134,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

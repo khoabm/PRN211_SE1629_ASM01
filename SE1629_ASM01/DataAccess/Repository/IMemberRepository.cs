@@ -11,5 +11,7 @@ namespace DataAccess.Repository
     {
         IEnumerable<Member> GetMembers();
         Member MemberLogin(string username, string password);
+        IEnumerable<Member> GetByName(string name);
+        void Delete(int id);
     }
 }

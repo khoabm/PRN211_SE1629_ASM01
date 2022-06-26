@@ -19,5 +19,8 @@ namespace DataAccess.Repository
         
         public int getNewID() => MemberDBContext.instance.GetID();
         public void insertMember(int id, string email, string passsword, string name, string city, string country) => MemberDBContext.instance.InsertMember(id, email, passsword, name, city, country);
+        public void updateMember(Member member) => MemberDBContext.Instance.UpdateMember(member);
+
+        public Member getMemberByID(int id) => MemberDBContext.instance.GetById(id);
     }
 }

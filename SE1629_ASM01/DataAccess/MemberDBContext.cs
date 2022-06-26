@@ -21,7 +21,7 @@ namespace DataAccess
             }
         }
 
-
+        
 
 
         //GET ALL LIST OF MEMBERS
@@ -205,6 +205,31 @@ namespace DataAccess
                 throw new Exception(ex.Message);
             }
             finally { CloseConnection(); }
+        }
+        //UPDATE MEMBER
+        public void UpdateMember(Member member)
+        {
+            IDataReader dataReader = null;
+            Boolean check = false;
+            string SQLUpdate = "update Member " +
+                "set id = @id1, email = @email, password = @password, member_name = @name, city = @city, country = @country where id = @id2";
+            try
+            {
+                var param1 = StockDataProvider.CreateParameter("@id1", 50, member.Id, DbType.Int32);
+                var param2 = StockDataProvider.CreateParameter("@email", 50, member.Email, DbType.String);
+                var param3 = StockDataProvider.CreateParameter("@password", 30, member.Password, DbType.String);
+                var param4 = StockDataProvider.CreateParameter("@name", 30, member.Name, DbType.String);
+                var param5 = StockDataProvider.CreateParameter("@city", 30, member.City, DbType.String);
+                var param6 = StockDataProvider.CreateParameter("@country", 30, member.Country, DbType.String);
+                var param7 = StockDataProvider.CreateParameter("@id2", 50, member.Id, DbType.Int32);
+                StockDataProvider.Update(SQLUpdate, CommandType.Text, param1, param2, param3, param4, param5, param6, param7);
+                check = true;
+            }
+            catch (Exception ex)
+            {
+                check = false;
+                throw new Exception(ex.Message);
+            }
         }
         // INSERT A MEMBER TO LIST
         public void InsertMember(int id, string email, string password, string name, string city, string country)

@@ -111,5 +111,14 @@ namespace MyStoreWinApp
             frmInsertMember.ShowDialog();
             LoadMemberList();
         }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            var member = memberRepository.getMemberByID(int.Parse(txtID.Text));
+            frmUpdateMember frmUpdateMember = new frmUpdateMember { Member = member};
+            //memberRepository.updateMember(member);
+            frmUpdateMember.ShowDialog();
+            LoadMemberList();
+        }
     }
 }

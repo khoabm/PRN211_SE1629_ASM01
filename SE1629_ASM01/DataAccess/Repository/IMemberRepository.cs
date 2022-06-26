@@ -13,5 +13,7 @@ namespace DataAccess.Repository
         Member MemberLogin(string username, string password);
         IEnumerable<Member> GetByName(string name);
         void Delete(int id);
+        public int getNewID();
+        public void insertMember(int id, String email,String password, String name,String city,String country);
     }
 }

@@ -21,6 +21,9 @@ namespace DataAccess
             }
         }
 
+
+
+
         //GET ALL LIST OF MEMBERS
         public IEnumerable<Member> GetMembers()
         {
@@ -54,6 +57,31 @@ namespace DataAccess
                 dataReader.Close();
                 CloseConnection();
             }
+        }
+
+        // GET NEWEST ID NUMBER
+        public int GetID()
+        {
+            int Id = -1;
+            IDataReader dataReader = null;
+            string SQLSelect = "select top 1 id from Member order by id desc";
+            try
+            {
+                dataReader = StockDataProvider.GetDataReader(SQLSelect, CommandType.Text, out connection);
+                if (dataReader.Read()) Id = dataReader.GetInt32(0);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            finally
+            {
+                
+                dataReader.Close();
+                CloseConnection();
+                
+            }
+            return Id+1;
         }
 
         //CHECK LOGIN MEMBER IF EXIST
@@ -177,6 +205,31 @@ namespace DataAccess
                 throw new Exception(ex.Message);
             }
             finally { CloseConnection(); }
+        }
+        // INSERT A MEMBER TO LIST
+        public void InsertMember(int id, string email, string password, string name, string city, string country)
+        {
+            Member member = null;
+            IDataReader dataReader = null;
+            Boolean check = false;
+            string SQLInsert = "insert into Member values(@id, @email, @password, @name, @city, @country)";
+            try
+            {
+                var param1 = StockDataProvider.CreateParameter("@id", 50, id, DbType.Int32);
+                var param2 = StockDataProvider.CreateParameter("@email", 50, email, DbType.String);
+                var param3 = StockDataProvider.CreateParameter("@password", 30, password, DbType.String);
+                var param4 = StockDataProvider.CreateParameter("@name", 30, name, DbType.String);
+                var param5 = StockDataProvider.CreateParameter("@city", 30, city, DbType.String);
+                var param6 = StockDataProvider.CreateParameter("@country", 30, country, DbType.String);
+                StockDataProvider.Insert(SQLInsert, CommandType.Text, param1, param2, param3, param4, param5, param6);
+                check = true;
+            }
+            catch (Exception ex)
+            {
+                check = false;
+                throw new Exception(ex.Message);
+            }
+           // return check;
         }
     }
 }

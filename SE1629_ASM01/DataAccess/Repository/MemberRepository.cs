@@ -17,5 +17,7 @@ namespace DataAccess.Repository
 
         public Member MemberLogin(string username, string password) => MemberDBContext.Instance.MemberLogin(username, password);
         
+        public int getNewID() => MemberDBContext.instance.GetID();
+        public void insertMember(int id, string email, string passsword, string name, string city, string country) => MemberDBContext.instance.InsertMember(id, email, passsword, name, city, country);
     }
 }

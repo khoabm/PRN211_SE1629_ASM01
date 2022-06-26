@@ -104,5 +104,12 @@ namespace MyStoreWinApp
                 MessageBox.Show(ex.Message, "Delete a member");
             }
         }
+
+        private void btnInsert_Click(object sender, EventArgs e)
+        {
+            frmInsertMember frmInsertMember = new frmInsertMember();
+            frmInsertMember.ShowDialog();
+            LoadMemberList();
+        }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using BusinessObject;
 using DataAccess.Repository;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -71,13 +72,36 @@ namespace MyStoreWinApp
             //cboCity.DataSource = memberRepository.GetCities();
             LoadMemberList();
             //dgvMembers.CellDoubleClick += DgvCellDoubleClick;
+
+            //Load cities list
+            //cboCity.DataSource = memberRepository.GetCities();
+            IList cboCityDataSource = new List<string>();
+            List<string> cities = (from c in memberRepository.GetCities() select c).ToList();
+
+            foreach (string c in cities)
+            {
+                cboCityDataSource.Add(c);
+            }
+            cboCityDataSource.Insert(0, "None");
+            cboCity.DataSource = cboCityDataSource;
+            //Load countries list
+            IList cboCountryDataSource = new List<string>();
+            List<string> countries = (from c in memberRepository.GetCountries() select c).ToList();
+
+            foreach (string c in countries)
+            {
+                cboCountryDataSource.Add(c);
+            }
+            cboCountryDataSource.Insert(0, "None");
+            cboCountry.DataSource = cboCountryDataSource;
+            //cboCountry.DataSource = memberRepository.GetCountries();
         }
 
         private void btnSort_Click(object sender, EventArgs e)
         {
             source.DataSource = memberRepository.GetMembers().OrderByDescending(mem => mem.Name).ToList();
         }
-        
+
         private void txtSearch_KeyUp(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -115,10 +139,52 @@ namespace MyStoreWinApp
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             var member = memberRepository.getMemberByID(int.Parse(txtID.Text));
-            frmUpdateMember frmUpdateMember = new frmUpdateMember { Member = member};
+            frmUpdateMember frmUpdateMember = new frmUpdateMember { Member = member };
             //memberRepository.updateMember(member);
             frmUpdateMember.ShowDialog();
             LoadMemberList();
+        }
+
+        private void btnFilter_Click(object sender, EventArgs e)
+        {
+            string? city = cboCity.SelectedValue.ToString();
+            string? country = cboCountry.SelectedValue.ToString();
+            if (city.Equals("None") && country.Equals("None"))
+            {
+                MessageBox.Show("Choose a city or country", "Filter");
+            }
+            else
+            {
+                if (city == "None")
+                {
+                    source.DataSource = memberRepository.GetMembers().Where(x => x.Country == country).ToList();
+                }
+                else if (country == "None")
+                {
+                    source.DataSource = memberRepository.GetMembers().Where(x => x.City == city).ToList();
+                    
+                    //MessageBox.Show("No country");
+                }
+                else
+                {
+                    source.DataSource = memberRepository.GetMembers()
+                        .Where(m => (m.Country == country) && (m.City == city)).ToList();
+                }
+            }
+        }
+
+        private void btnReload_Click(object sender, EventArgs e)
+        {
+            LoadMemberList();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+           DialogResult dr =  MessageBox.Show("Are you sure to quit", "Quit", MessageBoxButtons.YesNo);
+            if(dr == DialogResult.Yes)
+            {
+                this.Close();
+            }
         }
     }
 }

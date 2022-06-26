@@ -21,7 +21,7 @@ namespace DataAccess
             }
         }
 
-        
+
 
 
         //GET ALL LIST OF MEMBERS
@@ -76,12 +76,12 @@ namespace DataAccess
             }
             finally
             {
-                
+
                 dataReader.Close();
                 CloseConnection();
-                
+
             }
-            return Id+1;
+            return Id + 1;
         }
 
         //CHECK LOGIN MEMBER IF EXIST
@@ -120,12 +120,12 @@ namespace DataAccess
         public IEnumerable<Member> GetByName(string name)
         {
             var members = new List<Member>();
-            IDataReader dataReader = null ;
+            IDataReader dataReader = null;
             string SQLSelect = "Select * FROM Member WHERE member_name LIKE '%' + @name + '%'";
             try
             {
                 var param = StockDataProvider.CreateParameter("@name", 30, name, DbType.String);
-                dataReader = StockDataProvider.GetDataReader(SQLSelect, CommandType.Text, out connection,param);
+                dataReader = StockDataProvider.GetDataReader(SQLSelect, CommandType.Text, out connection, param);
                 while (dataReader.Read())
                 {
                     members.Add(new Member
@@ -133,7 +133,7 @@ namespace DataAccess
                         Id = dataReader.GetInt32(0),
                         Email = dataReader.GetString(1),
                         Password = dataReader.GetString(2),
-                        Name = dataReader.GetString(3),    
+                        Name = dataReader.GetString(3),
                         City = dataReader.GetString(4),
                         Country = dataReader.GetString(5)
                     });
@@ -148,7 +148,7 @@ namespace DataAccess
                 dataReader.Close();
                 CloseConnection();
             }
-            return members ;
+            return members;
         }
         public Member GetById(int id)
         {
@@ -254,7 +254,61 @@ namespace DataAccess
                 check = false;
                 throw new Exception(ex.Message);
             }
-           // return check;
+            // return check;
+        }
+
+        //GET ALL CITIES DISTINCTLY
+        public IEnumerable<string> GetCity()
+        {
+            IDataReader dataReader = null;
+            string SQLSelect = "Select distinct city FROM Member";
+            var cities = new List<string>();
+            try
+            {
+                dataReader = StockDataProvider.GetDataReader(SQLSelect, CommandType.Text, out connection);
+                while (dataReader.Read())
+                {
+                    cities.Add(dataReader.GetString(0));
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception(ex.Message);
+            }
+            finally
+            {
+                dataReader.Close();
+                CloseConnection();
+            }
+            return cities;
+        }
+        public IEnumerable<string> GetCountry()
+        {
+            IDataReader dataReader = null;
+            string SQLSelect = "Select distinct country FROM Member";
+            var countries = new List<string>();
+            try
+            {
+                dataReader = StockDataProvider.GetDataReader(SQLSelect, CommandType.Text, out connection);
+                while (dataReader.Read())
+                {
+                    countries.Add(dataReader.GetString(0));
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception(ex.Message);
+            }
+            finally
+            {
+                dataReader.Close();
+                CloseConnection();
+            }
+            return countries;
         }
     }
 }

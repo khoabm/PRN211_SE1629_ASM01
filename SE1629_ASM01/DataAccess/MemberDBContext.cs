@@ -20,7 +20,7 @@ namespace DataAccess
                 return instance;
             }
         }
-
+    
         
 
 
@@ -183,6 +183,42 @@ namespace DataAccess
             }
             return member;
         }
+
+        // GET MEMBER BY EMAIL
+        public Member GetByEmail(String email)
+        {
+            Member member = null;
+            IDataReader dataReader = null;
+            string SQLSelect = "Select * FROM Member WHERE email=@email";
+            try
+            {
+                var param = StockDataProvider.CreateParameter("@email", 50, email, DbType.String);
+                dataReader = StockDataProvider.GetDataReader(SQLSelect, CommandType.Text, out connection, param);
+                if (dataReader.Read())
+                {
+                    member = new Member
+                    {
+                        Id = dataReader.GetInt32(0),
+                        Email = dataReader.GetString(1),
+                        Password = dataReader.GetString(2),
+                        Name = dataReader.GetString(3),
+                        City = dataReader.GetString(4),
+                        Country = dataReader.GetString(5)
+                    };
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            finally
+            {
+                dataReader.Close();
+                CloseConnection();
+            }
+            return member;
+        }
+
         //DELETE
         public void Delete(int id)
         {

@@ -115,7 +115,8 @@ namespace MyStoreWinApp
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             var member = memberRepository.getMemberByID(int.Parse(txtID.Text));
-            frmUpdateMember frmUpdateMember = new frmUpdateMember { Member = member};
+            if (!IsAdmin) member = memberRepository.getMemberByEmail(UserEmail);
+            frmUpdateMember frmUpdateMember = new frmUpdateMember { Member = member };
             //memberRepository.updateMember(member);
             frmUpdateMember.ShowDialog();
             LoadMemberList();

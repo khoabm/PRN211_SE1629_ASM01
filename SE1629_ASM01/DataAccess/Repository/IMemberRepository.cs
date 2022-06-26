@@ -17,5 +17,6 @@ namespace DataAccess.Repository
         public void insertMember(int id, String email,String password, String name,String city,String country);
         public void updateMember(Member member);
         public Member getMemberByID(int id);
+        public Member getMemberByEmail(String email);
     }
 }

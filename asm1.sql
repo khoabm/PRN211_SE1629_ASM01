@@ -8,7 +8,8 @@ create table Member(
 	password varchar(30),
 	member_name varchar(30),
 	city varchar(30),
-	country varchar(30)
+	country varchar(30),
+	PRIMARY KEY (id)
 )
 
 insert into Member values('mem1', '123456', 'Khoa', 'HCM', 'Vietnam')

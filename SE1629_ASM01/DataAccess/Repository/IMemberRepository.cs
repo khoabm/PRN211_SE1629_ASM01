@@ -18,5 +18,7 @@ namespace DataAccess.Repository
         public void updateMember(Member member);
         public Member getMemberByID(int id);
         public Member getMemberByEmail(String email);
+       public IEnumerable<string> GetCities();
+        public IEnumerable<string> GetCountries();
     }
 }

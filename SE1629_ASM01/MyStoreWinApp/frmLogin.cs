@@ -57,7 +57,7 @@ namespace MyStoreWinApp
                 }
                 else
                 {
-                    MessageBox.Show("Account not exist", "Login");
+                    MessageBox.Show("Invalid email or password", "Login");
                 }
             }
         }

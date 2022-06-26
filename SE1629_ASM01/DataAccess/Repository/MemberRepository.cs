@@ -22,6 +22,13 @@ namespace DataAccess.Repository
         public void updateMember(Member member) => MemberDBContext.Instance.UpdateMember(member);
 
         public Member getMemberByID(int id) => MemberDBContext.instance.GetById(id);
+<<<<<<< HEAD
         public Member getMemberByEmail(String email) => MemberDBContext.instance.GetByEmail(email);
+=======
+
+        public IEnumerable<string> GetCities() => MemberDBContext.Instance.GetCity();
+
+        public IEnumerable<string> GetCountries() => MemberDBContext.Instance.GetCountry();
+>>>>>>> c828bc3e5f683d4e184574a2232136bc88184c63
     }
 }

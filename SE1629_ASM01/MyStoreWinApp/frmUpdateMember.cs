@@ -42,9 +42,16 @@ namespace MyStoreWinApp
                     City= city,
                     Country= country,
                 };
-                memberRepository.updateMember(member);
-                MessageBox.Show("Update success", "Update success");
-                this.Hide();
+                if (String.IsNullOrEmpty(email) || (String.IsNullOrEmpty(password)))
+                {
+                    MessageBox.Show("Email and password must not be empty", "Update failed");
+                }
+                else
+                {
+                    memberRepository.updateMember(member);
+                    MessageBox.Show("Update success", "Update success");
+                    this.Hide();
+                }
             }
             catch(Exception ex)
             {

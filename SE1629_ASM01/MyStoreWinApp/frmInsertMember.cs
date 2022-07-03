@@ -39,8 +39,17 @@ namespace MyStoreWinApp
                 string name = txtEmail.Text.ToString();
                 string city = txtCity.Text.ToString();
                 string country = txtCountry.Text.ToString();
-                memberRepository.insertMember(id, email, password, name, city, country);
-                MessageBox.Show("Insert Success", "Insert Success");
+                if (String.IsNullOrEmpty(email) || String.IsNullOrEmpty(password))
+                {
+                    MessageBox.Show("Email and password must not be empty", "Insert Failed");
+                }
+                else
+                {
+                    memberRepository.insertMember(id, email, password, name, city, country);
+                    MessageBox.Show("Insert Success", "Insert Success");
+                    this.Hide();
+                }
+               
             }
             catch (Exception ex)
             {
